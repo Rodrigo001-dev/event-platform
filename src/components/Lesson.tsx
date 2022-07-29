@@ -1,6 +1,7 @@
 import { CheckCircle, Lock } from 'phosphor-react';
 import { isPast, format } from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
+import { Link } from 'react-router-dom';
 
 interface LessonProps {
   title: string;
@@ -20,7 +21,9 @@ export function Lesson({ title, slug, availableAt, type }: LessonProps) {
   });
 
   return (
-    <a href="#" className="group">
+    // o className="group" vai servir para quando eu passar o mouse em cima desse
+    // grupo(group-hover) ele vai aplicar o hover
+    <Link to={`/event/lesson/${slug}`} className="group">
       <span className="text-gray-300">
         {availableDateFormatted}
       </span>
@@ -49,6 +52,6 @@ export function Lesson({ title, slug, availableAt, type }: LessonProps) {
           {title}
         </strong>
       </div>
-    </a>
+    </Link>
   );
 };
