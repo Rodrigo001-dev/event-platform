@@ -1,6 +1,35 @@
+import { gql, useQuery } from "@apollo/client";
+
 import { Lesson } from "./Lesson";
 
+// orderBy: availableAt_ASC => quer dizer que eu estou ordenando as lessons pela
+// data que vai ser exibida em ordem crescente
+// stage: PUBLISHED => é para listar somente as aulas que foram publicadas
+const GET_LESSONS_QUERY = gql`
+  query {
+    lessons(orderBy: availableAt_ASC, stage: PUBLISHED) {
+      id
+      lessonType
+      availableAt
+      title
+      slug
+    }
+  }
+`;
+
+interface GetLessonsQueryResponse {
+  lessons: {
+    id: string;
+    title: string;
+    slug: string;
+    availableAt: string;
+    lessonType: 'live' | 'class';
+  }[]
+};
+
 export function Sidebar() {
+  const { data } = useQuery<GetLessonsQueryResponse>(GET_LESSONS_QUERY);
+
   return (
     // no tailwind quando não tem o valor pré-criado eu posso abrir o [] e 
     // colocar o valor que eu quero dentro
@@ -12,12 +41,17 @@ export function Sidebar() {
 
       {/* p gap-8 vai adicionar um espaçamento entre cada uma das Lessons de 32px */}
       <div className="flex flex-col gap-8">
-        <Lesson />
-        <Lesson />
-        <Lesson />
-        <Lesson />
-        <Lesson />
-        <Lesson />
+        {data?.lessons.map(lesson => {
+          return (
+            <Lesson
+              key={lesson.id}
+              title={lesson.title}
+              slug={lesson.slug}
+              availableAt={new Date(lesson.availableAt)}
+              type={lesson.lessonType}
+            />
+          )
+        })}
       </div>
     </aside>
   );
