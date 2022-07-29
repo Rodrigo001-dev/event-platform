@@ -22,7 +22,7 @@ export function Lesson({ title, slug, availableAt, type }: LessonProps) {
   return (
     <a href="#">
       <span className="text-gray-300">
-        {availableAt.toString()}
+        {availableDateFormatted}
       </span>
 
       {/* rounded => border-radius: 4px */}
