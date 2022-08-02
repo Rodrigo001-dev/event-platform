@@ -5,9 +5,17 @@ import { Lesson } from "./Lesson";
 // orderBy: availableAt_ASC => quer dizer que eu estou ordenando as lessons pela
 // data que vai ser exibida em ordem crescente
 // stage: PUBLISHED => é para listar somente as aulas que foram publicadas
-const GET_LESSONS_QUERY = gql`
-  
-`;
+// const GET_LESSONS_QUERY = gql`
+//   query {
+//     lessons(orderBy: availableAt_ASC, stage: PUBLISHED) {
+//       id
+//       lessonType
+//       availableAt
+//       title
+//       slug
+//     }
+//   }
+// `;
 
 interface GetLessonsQueryResponse {
   lessons: {
