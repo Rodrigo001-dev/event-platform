@@ -1,0 +1,10 @@
+schema: https://api-sa-east-1.hygraph.com/v2/cl63aqe7i6hm501uk7f6qg7fv/master
+
+documents: './src/graphql/**/*.graphql'
+
+generates:
+  ./src/generated.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typed-document-node
