@@ -1,4 +1,4 @@
-schema: YOUR_API_GRAPHQL
+schema: https://api-sa-east-1.hygraph.com/v2/cl63aqe7i6hm501uk7f6qg7fv/master
 
 documents: './src/graphql/**/*.graphql'
 
