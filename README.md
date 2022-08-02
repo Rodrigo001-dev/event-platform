@@ -2,7 +2,7 @@
 
 Event Platform ✨ - Ignite Lab 🧪
 
-![Ignite Lab Image]()
+![Ignite Lab Image](https://github.com/Rodrigo001-dev/event-platform/blob/main/.github/ignite-lab.png)
 
 Aplicação criada no evento Ignite Lab 2 da Rocketseat!
 
