@@ -1,8 +1,8 @@
-import { gql, useMutation } from "@apollo/client";
 import { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { Logo } from "../components/Logo";
+import { useCreateSubscriberMutation } from "../graphql/generated";
 
 // const CREATE_SUBSCRIBER_MUTATION = gql`
 //   mutation CreateSubscriber ($name: String!, $email: String!) {
@@ -24,7 +24,7 @@ export function Subscribe() {
   // o loading é para saber o status da requisição, o loading é true ou false
   // se tiver true que dizer que a mutation está sendo feita, se tiver false
   // é porque ela já terminou ou ela nem começou a ser feita ainda
-  const [createSubscriber, { loading }] = useMutation(CREATE_SUBSCRIBER_MUTATION);
+  const [createSubscriber, { loading }] = useCreateSubscriberMutation();
 
   async function handleSubscribe(event: FormEvent) {
     event.preventDefault();
