@@ -19,18 +19,18 @@ import '@vime/core/themes/default.css';
 //   }
 // `;
 
-interface GetLessonBySlugResponse {
-  lesson: {
-    title: string;
-    videoId: string;
-    description: string;
-    teacher: {
-      bio: string;
-      avatarURL: string;
-      name: string;
-    };
-  };
-};
+// interface GetLessonBySlugResponse {
+//   lesson: {
+//     title: string;
+//     videoId: string;
+//     description: string;
+//     teacher: {
+//       bio: string;
+//       avatarURL: string;
+//       name: string;
+//     };
+//   };
+// };
 
 interface VideoProps {
   lessonSlug: string;

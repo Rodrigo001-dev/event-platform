@@ -17,15 +17,15 @@ import { Lesson } from "./Lesson";
 //   }
 // `;
 
-interface GetLessonsQueryResponse {
-  lessons: {
-    id: string;
-    title: string;
-    slug: string;
-    availableAt: string;
-    lessonType: 'live' | 'class';
-  }[]
-};
+// interface GetLessonsQueryResponse {
+//   lessons: {
+//     id: string;
+//     title: string;
+//     slug: string;
+//     availableAt: string;
+//     lessonType: 'live' | 'class';
+//   }[]
+// };
 
 export function Sidebar() {
   const { data } = useQuery<GetLessonsQueryResponse>(GET_LESSONS_QUERY);
