@@ -17,6 +17,7 @@ No caso dessa aplicação foi utilizado um CMS chamado GraphCMS como fornecedor 
 ## 🚀 Tecnologias/Bibliotecas utilizadas
 
 <a href="https://www.typescriptlang.org/" target="_blank"> <img src="https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=TypeScript&logoColor=white" alt="TypeScript"> </a>
+<a href="https://pt-br.reactjs.org/" target="_blank"> <img src="https://img.shields.io/badge/-ReactJS-61DAFB?style=flat-square&logo=React&logoColor=white" alt="React"> </a>
 <a href="https://graphql.org/" target="_blank"> <img src="https://img.shields.io/badge/-GraphQL-e10098?style=flat-square&logo=Graphql&logoColor=white" alt="GraphQL"> </a>
 <a href="https://graphcms.com/" target="_blank"> <img src="https://img.shields.io/badge/-GraphCMS-090E24?style=flat-square&logo=GraphCMS&logoColor=white" alt="GraphCMS"> </a>
 <a href="https://www.graphql-code-generator.com/" target="_blank"> <img src="https://img.shields.io/badge/-GraphqlCodegen-EE1CD9?style=flat-square&logo=graphqlcodegen&logoColor=white" alt="Graphql-codegen"> </a>
